@@ -272,7 +272,13 @@ strong{font-weight:700;color:var(--ink)}
 /* ═══ PROOF ═══ */
 .certs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:clamp(30px,4vw,46px)}
 @media(max-width:760px){.certs{grid-template-columns:1fr}}
-.cert{aspect-ratio:4/3;overflow:hidden;border:1px solid var(--line)}
+.cert{border:1px solid var(--line);background:#fff;overflow:hidden;display:block;text-decoration:none;color:inherit;
+  transition:box-shadow .2s,transform .2s}
+.cert:hover{box-shadow:0 18px 44px rgba(11,16,22,.14);transform:translateY(-2px)}
+.cert img{width:100%;height:auto;display:block}
+.cert figcaption{padding:14px 16px;font-size:.86rem;color:var(--txt-3);line-height:1.5;
+  border-top:1px solid var(--line);background:var(--bone)}
+.cert figcaption b{display:block;color:var(--ink);font-size:.95rem;font-weight:600;margin-bottom:3px}
 .gal{display:grid;grid-template-columns:repeat(12,1fr);gap:14px;margin-top:clamp(34px,4.5vw,52px)}
 .gal>*{overflow:hidden;min-height:180px}
 .gal .a{grid-column:span 7;aspect-ratio:3/2}
@@ -699,9 +705,18 @@ strong{font-weight:700;color:var(--ink)}
     </div>
 
     <div class="certs rv">
-      <div class="cert"><div class="slot light"><i><b>תעודת הוקרה</b>סריקה 300dpi · שם הארגון המעניק</i></div></div>
-      <div class="cert"><div class="slot light"><i><b>תעודת סיום קורס</b>שם הקורס · המוסד · שנה</i></div></div>
-      <div class="cert"><div class="slot light"><i><b>תעודת הוקרה</b>סריקה 300dpi · שם הארגון המעניק</i></div></div>
+      <a class="cert" href="cert-beitberl.webp" target="_blank" rel="noopener">
+        <img src="cert-beitberl.webp" alt="תעודת הצטיינות מהמכללה האקדמית בית ברל לחוסה בבצ'יק" loading="lazy" width="1000" height="1358">
+        <figcaption><b>תעודת הצטיינות</b>המכללה האקדמית בית ברל · תשפ"ג</figcaption>
+      </a>
+      <a class="cert" href="cert-links.webp" target="_blank" rel="noopener">
+        <img src="cert-links.webp" alt="תעודת הוקרה ממכללת לינקס לחוסה בבצ'יק על הנחיית קבוצות בנצרת" loading="lazy" width="1000" height="1358">
+        <figcaption><b>תעודת הוקרה</b>מכללת לינקס · הנחיית קבוצות נצרת, 2017</figcaption>
+      </a>
+      <a class="cert" href="cert-katzinot.webp" target="_blank" rel="noopener">
+        <img src="cert-katzinot.webp" alt="מכתב הוקרה מקצינות החינוך לחוסה בבצ'יק בתום קורס הנחיית קבוצות" loading="lazy" width="1000" height="1358">
+        <figcaption><b>מכתב הוקרה</b>קצינות החינוך · בתום קורס הנחיית קבוצות</figcaption>
+      </a>
     </div>
 
     <div class="quotes rv">
